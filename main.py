@@ -25,18 +25,10 @@ code_prompt = PromptTemplate(
     input_variables=["code", "language"],
 )
 
+
 # Format the prompt with the provided code and language
 formatted_prompt = code_prompt.format(code=args.code, language=args.language)
 
 # Invoke the LLM with the formatted prompt
 result = llm.invoke(formatted_prompt)
 print(result.content)
-
-
-# echo "# Langchain" >> README.md
-# git init
-# git add README.md
-# git commit -m "first commit"
-# git branch -M main
-# git remote add origin https://github.com/tayyab-dev123/Langchain.git
-# git push -u origin main
